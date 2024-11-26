@@ -46,7 +46,7 @@ def main():
             # Preprocess Data
             data.columns = data.columns.str.lower().str.replace(' ', '_')
             data.drop(columns=['incident_id', 'updated_at', 'created_at'], inplace=True, errors='ignore')
-            #data.dropna(inplace=True)
+            data.dropna(inplace=True)
 
             redundant_columns = ['parent_incident_type', 'state', 'city', 'location', 'census_tract', 'census_block',
                                  '2010_census_tract_', '2010_census_block_group', '2010_census_block', 'tractce20',
